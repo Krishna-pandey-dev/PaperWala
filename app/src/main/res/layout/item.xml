@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="7dp"
+        android:elevation="@dimen/cardview_default_elevation"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/mainimg"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:transitionName="image" />
+
+            <ImageView
+                android:id="@+id/shadow_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_alignBottom="@id/mainimg"
+                android:layout_marginBottom="-7dp"
+                android:src="@drawable/bottom_shadow" />
+
+            <ProgressBar
+                android:id="@+id/progress_load_photo"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginTop="70dp" />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_alignTop="@+id/layout_date"
+                android:layout_alignEnd="@+id/layout_date"
+                android:layout_alignRight="@+id/layout_date"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="316dp"
+                android:layout_marginRight="316dp"
+                android:drawablePadding="10dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+
+                android:singleLine="true"
+                android:text="Author"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:id="@+id/layout_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainimg"
+                android:padding="5dp"
+                android:background="@drawable/round_white"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="-50dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_date"
+                    android:layout_marginStart="3dp"
+                    android:layout_marginEnd="5dp"/>
+                <TextView
+                    android:id="@+id/published_at"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#606060"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginEnd="18dp"
+                    android:textStyle="normal"
+                    android:text="1 January 1990"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Title"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:textColor="@color/texttitle"
+                android:layout_below="@id/mainimg"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                />
+            <TextView
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textStyle="normal"
+                android:textSize="10sp"
+                android:textColor="@color/textsubtitle"
+                android:layout_below="@id/title"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                />
+            <TextView
+            android:id="@+id/source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Source"
+            android:textStyle="bold"
+            android:textSize="10sp"
+            android:textColor="@color/textsubtitle"
+            android:layout_below="@id/desc"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="20dp"
+                android:layout_below="@+id/desc"
+                android:layout_toRightOf="@id/source"
+                android:text="Time"
+                android:textColor="@color/textsubtitle"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>
