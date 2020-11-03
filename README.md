@@ -60,4 +60,3 @@ You can search for articles with any combination of the following criteria:
 
 
 #### Source : https://newsapi.org/docs
-
