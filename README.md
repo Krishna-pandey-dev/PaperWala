@@ -60,3 +60,6 @@ You can search for articles with any combination of the following criteria:
 
 
 #### Source : https://newsapi.org/docs
+
+
+<img src = pictures/ss1.png width = "320" height = "480">
